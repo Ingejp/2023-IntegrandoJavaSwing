@@ -7,11 +7,18 @@ package paracalificar;
 
 public class Calculadora {    
     //Atributos de Clase, pueden ser Publicos, Privados y Protegidos (en herencia)
-    public String tipoCalculadora;
-    public String color;
-    public int dimensionPantalla;
+    protected String tipoCalculadora;
+    protected String color;
+    protected int dimensionPantalla;
     protected String numeroDeSerie;
     protected String nombrePropietario;
+    
+    //Constructor vacio
+    public Calculadora(){
+    }
+    
+    public Calculadora(int indice){
+    }
     
     //Constructor de la calse
     public Calculadora(String propietario){
@@ -73,15 +80,15 @@ public class Calculadora {
     }
     
     
-    //Constructor vacio
-    public Calculadora(){
-    }
-    
     //Are de declaración de metodos
     //en clase hemos dicho "funciones" anteriormente, pero en POO son metodos.
     public double sumar(double primerNumero, double segundoNumero){
         return primerNumero + segundoNumero;
     }
+    
+    public double sumar(){
+        return 10.5;
+    }    
     
     public double restar(double primerNumero, double segundoNumero){
         return primerNumero - segundoNumero;
@@ -93,6 +100,10 @@ public class Calculadora {
     
     public double dividir(double primerNumero, double segundoNumero){
         return primerNumero / segundoNumero;
+    }
+    
+    private void hacerAlgoPrivado(){//este metodo NO se hereda
+    //CUALQUIER CODIGO INTERNO A LA CLASE
     }
     
     public double raizCuadrada(double numero){
